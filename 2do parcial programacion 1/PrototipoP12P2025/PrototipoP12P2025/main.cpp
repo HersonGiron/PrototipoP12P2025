@@ -1,8 +1,8 @@
 //Realizado por alumno: Herson Omar Giron Quixtan
-//Carné: 9959-24-20
+//CarnÃ©: 9959-24-20
 //Examen 2do parcial
-//año: 2025
-// Inclusión de bibliotecas y headers
+//aÃ±o: 2025
+// InclusiÃ³n de bibliotecas y headers
 #include <iostream>
 #include <unistd.h>
 #include <cstdlib>
@@ -15,7 +15,7 @@ using namespace std;
 // Main del proyecto
 int main()
 {
-    // Valores predeterminados de la configuración por defecto
+    // Valores predeterminados de la configuraciÃ³n por defecto
     const int FILASTABLERO = 4;
     const int COLUMNASTABLERO = 4;
     const int MINASENTABLERO = 1;
@@ -23,7 +23,7 @@ int main()
     const bool MODODESARROLLADOR = true;
     const int VIDASTABLERO = 3;
 
-    // Llamada a la función de configuración del juego
+    // Llamada a la funciÃ³n de configuraciÃ³n del juego
     Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR, VIDASTABLERO, NOMBREUSUARIO);
     Juego juego(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero(), configuracionJuego.getnombreUsuario());
     srand(time(NULL));
@@ -31,17 +31,17 @@ int main()
     int opciones;
     bool repetir = true;
 
-    // Ciclo de menú
+    // Ciclo de menÃº
     do
     {
         system("cls");
 
         cout << "\n\n\t\tBUSCA MINAS - Menu -" << endl;
         cout << "\t\t----------------------" << endl;
-        cout << "\t\t1. Configuración del Juego" << endl;
+        cout << "\t\t1. ConfiguraciÃ³n del Juego" << endl;
         cout << "\t\t2. Iniciar el Juego" << endl;
         cout << "\t\t3. Salir del Juego" << endl;
-        cout << "\n\t\tIngrese una opción: ";
+        cout << "\n\t\tIngrese una opciÃ³n: ";
         cin >> opciones;
 
         switch (opciones)
@@ -53,7 +53,7 @@ int main()
 
         case 2:
         {
-            // Iniciar juego con configuración actual
+            // Iniciar juego con configuraciÃ³n actual
             Juego juegoTemporal(
                 Tablero(
                     configuracionJuego.getfilasTablero(),
@@ -73,7 +73,8 @@ int main()
             break;
 
         default:
-            cout << "Opción inválida. Intente nuevamente.\n";
+            //nos indica si la opcion es invalida
+            cout << "OpciÃ³n invÃ¡lida. Intente nuevamente.\n";
             system("pause");
             break;
         }
